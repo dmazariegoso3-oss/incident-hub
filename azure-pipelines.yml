@@ -1,0 +1,24 @@
+# Alternativa preparada para el requisito original; NO ejecutada.
+trigger:
+  - main
+pool:
+  vmImage: ubuntu-latest
+steps:
+  - checkout: self
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.13'
+  - script: python -m pip install -r requirements.txt
+    displayName: Restore
+  - script: python -m compileall -q backend devops
+    displayName: Build
+  - script: python -m unittest discover -s tests -v
+    displayName: Tests
+  - script: python -m pip install pip-audit && pip-audit -r requirements.txt
+    displayName: Dependency audit
+  - script: python devops/package.py
+    displayName: Package
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: dist
+      artifact: incident-hub
