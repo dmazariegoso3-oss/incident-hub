@@ -5,16 +5,16 @@ Mesa de servicio académica para registrar incidentes de TI, asignarlos, darles 
 ## Estado publicado
 
 - Repositorio único y público: https://github.com/dmazariegoso3-oss/incident-hub.
-- Los PR #1, #2 y #33–#39 están fusionados en main; la búsqueda por título y descripción ya está disponible en la interfaz.
-- La segunda cuenta crismazariegosovan-star aprobó #1, #2, #33, #34, #35, #37, #38 y #39. El PR #36 recibió revisión COMMENTED, no APPROVED.
-- El issue #20 se cerró al fusionar #38. No hay PR abiertos al actualizar este documento.
-- El instructor confirmó, según lo informado por la estudiante, usar dos cuentas de GitHub ante la falta de Azure. La cuenta principal prepara cambios; la segunda cuenta prueba, revisa y aprueba PR. GitHub Issues/Projects y Actions son la plataforma de trabajo acordada.
+- Los PR #1, #2 y #33–#40 están fusionados en main; la búsqueda por título y descripción ya está disponible en la interfaz.
+- La segunda cuenta crismazariegosovan-star aprobó #1, #2, #33, #34, #35, #37, #38, #39 y #40. El PR #36 recibió revisión COMMENTED, no APPROVED.
+- El issue #20 se cerró al fusionar #38. El PR del ensayo controlado documenta [el fallo #80](https://github.com/dmazariegoso3-oss/incident-hub/actions/runs/40166947909) y [la corrección verificada por CI #81](https://github.com/dmazariegoso3-oss/incident-hub/actions/runs/40167208606); el PR requiere revisión de la segunda cuenta.
+- La estudiante informó que el instructor permitió usar dos cuentas de GitHub ante la falta de Azure. La cuenta principal prepara cambios; la segunda cuenta prueba, revisa y aprueba PR. GitHub Issues/Projects y Actions son la plataforma de trabajo acordada.
 - Los 30 elementos del backlog están en Issues #3–#32 y en el tablero “IT Incident Hub - Backlog”. El tablero es privado; compártelo con el evaluador si necesita revisarlo.
 - El CI #65 ejecutó build, sintaxis JavaScript, 10 pruebas, auditoría de dependencias y paquete 0.1.0. Ver docs/dependencias.md.
 
 ## Pendientes para cerrar la entrega
 
-- Capturar la evidencia de un fallo controlado en GitHub Actions, diagnóstico, corrección y ejecución verde posterior.
+- Revisar y aprobar desde la segunda cuenta el PR del fallo controlado.
 - Ejecutar el workflow de validación con un runner autohospedado, si sigue siendo parte de los criterios aceptados por el instructor.
 - Trazar dos correcciones de deuda técnica a issues, commits, PR y pruebas.
 - Publicar tags/releases SemVer hasta v1.0.0, cuando se cumplan los criterios.
