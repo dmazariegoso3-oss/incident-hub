@@ -1,30 +1,29 @@
-# Cierre del proyecto: estado actual y plan
+# Cierre del proyecto: estado y próximos pasos
 
-Actualizado: 24 de octubre de 2026 (Guatemala). La aplicación base está en el único repositorio público. La entrega académica aún tiene evidencia operativa y de release pendiente.
+Actualizado: 24 de octubre de 2026 (Guatemala). La aplicación y el flujo de revisión por dos cuentas están publicados en un repositorio único.
 
 ## Estado de aceptación
 
-| Requisito | Estado verificado | Para cerrar |
+| Requisito | Estado | Para cerrar |
 |---|---|---|
-| Aplicación | API REST, frontend, SQLite, bitácora, filtros e indicadores en main. La búsqueda API está integrada; el campo visual se propone en #38. | Revisar y fusionar #38; mostrar el flujo en la demo. |
-| Repo único | Público en dmazariegoso3-oss/incident-hub. | — |
-| Backlog 2/4/8/16 | 30 issues #3–#32 en el tablero “IT Incident Hub - Backlog”; privado, 28 Todo, 1 In Progress y 1 Done. | Si el evaluador necesita verlo, el propietario debe hacerlo público. Confirmar si GitHub sustituye Azure Boards. |
-| Pull requests | #1, #2, #33–#35 y #37 fusionados con aprobación de crismazariegosovan-star. #36 fusionado tras revisión COMMENTED. #38 abierto y revisado aún pendiente. | La segunda cuenta debe revisar #38. #36 sí tiene revisión, pero no aprobación formal. |
-| CI, pruebas y paquete | CI #65 pasó build, sintaxis JS, 10 pruebas, inventario, auditoría y empaquetado; artefacto 0.1.0 generado. | Guardar y validar el artefacto en el paso de release. |
-| Dependencias | pip-audit 2.10.1 reportó cero vulnerabilidades conocidas al revisar requirements.txt vacío. | Considerar runtime, SQLite, acciones y runner; ver docs/dependencias.md. |
-| Azure | No hay ejecución de Azure confirmada. | Obtener aceptación escrita del ingeniero para GitHub o acceso y ejecución real de Azure Boards/Pipelines. |
-| Fallo controlado | No se acredita un pipeline fallido deliberado con diagnóstico y corrección. | Hacerlo en rama aislada; enlazar run fallido, causa, fix y run verde. |
-| Runner Windows | YAML manual configurado; runner real no registrado ni ejecutado. | Registrar el runner y guardar URL, logs y artefacto. |
-| Deuda técnica | Siete puntos identificados; dos correcciones todavía están descritas como locales sin trazabilidad remota. | Resolver dos con issue, rama, commit, PR y prueba. |
-| Versionado y release | Código 0.1.0; sin secuencia de tags/release hasta v1.0.0. | Crear versiones SemVer y demostrar controles de validación y aprobación. |
-| Demo | Guion escrito; demo final no registrada. | Demostrar el sistema y guardar evidencia. |
+| Aplicación | API REST, interfaz, SQLite, bitácora, filtros, indicadores y búsqueda visual están en main. | Mostrar el flujo en la demostración. |
+| Repositorio | Único y público: dmazariegoso3-oss/incident-hub. | — |
+| Backlog | 30 issues #3–#32: 2 Epics, 4 Features, 8 User Stories y 16 Tasks, vinculados al tablero privado “IT Incident Hub - Backlog”. | Compartir el tablero con el evaluador si lo necesita. |
+| PR y revisión | #1, #2 y #33–#39 están fusionados; la segunda cuenta aprobó #1, #2, #33–#35 y #37–#39. #36 tiene revisión COMMENTED. | — |
+| CI y artefacto | CI #65 pasó 10 pruebas y produjo el artefacto 0.1.0. #39 pasó sus dos checks. | Validar artefacto final en la demo. |
+| Sustitución de Azure | El instructor permitió, según informó la estudiante, usar dos cuentas de GitHub ante la falta de Azure. Issues/Projects, Actions y la aprobación separada documentan el proceso acordado. | Presentar el acuerdo y mostrar la evidencia de ambas cuentas. |
+| Fallo controlado | Falta secuencia verificable de fallo, diagnóstico, corrección y CI verde. | Hacerla en rama aislada y enlazar ambos runs. |
+| Runner | El workflow self-hosted existe; falta ejecución en runner real. | Confirmar si aplica al sustituto acordado; si aplica, registrar y usar runner Windows. |
+| Deuda técnica | Siete puntos identificados; faltan vínculos explícitos para dos correcciones. | Crear trazabilidad issue → commit → PR → prueba para dos deudas. |
+| Release | Código 0.1.0; todavía no hay tags/releases hasta v1.0.0. | Publicar versiones SemVer al cumplir criterios y validar el artefacto. |
+| Demo | Guion disponible; demo final pendiente. | Ejecutar y conservar evidencia. |
 
-## Secuencia
+## Secuencia de cierre
 
-1. La segunda cuenta revisa #38 y confirma que la búsqueda visual funciona en main después de integrarse.
-2. Confirmar con el ingeniero el uso de GitHub en lugar de Azure o completar los requisitos en Azure.
-3. Ejecutar y documentar auditoría, fallo controlado, runner y dos correcciones trazables.
-4. Validar el artefacto, publicar los tags/releases SemVer y preparar la demo final.
-5. Si el evaluador necesita el backlog, el propietario cambia la visibilidad del tablero privado a pública.
+1. Registrar un run controladamente fallido y su diagnóstico; corregir la causa en la misma rama y conservar el run verde posterior.
+2. Dar trazabilidad a dos correcciones de deuda técnica con issues, commits, PR y pruebas.
+3. Ejecutar el runner autohospedado si el instructor no lo eximió al autorizar la alternativa.
+4. Validar el paquete y publicar tags/releases SemVer hasta v1.0.0 al satisfacer los criterios.
+5. Recorrer la demostración final con ambas cuentas y compartir el tablero con el evaluador si lo solicita.
 
-No presentar archivos de configuración como ejecuciones ni inventar aprobaciones, runs o autorizaciones.
+No confundir configuración YAML con ejecución, revisión comentada con aprobación, ni versión local con release publicada.
