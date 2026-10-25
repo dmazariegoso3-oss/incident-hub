@@ -44,16 +44,9 @@ Comandos: python -m unittest discover -s tests -v; node --check frontend/app.js;
 
 ## Documentación
 
-- Arquitectura/API: docs/arquitectura.md
-- Backlog: docs/backlog.csv
-- Flujo de ramas y PR: docs/branching.md
-- Deuda técnica: docs/deuda-tecnica.md
-- Seguridad: docs/seguridad.md
-- Auditoría de dependencias: docs/dependencias.md
-- Release y runner: docs/release.md
-- Evidencias: docs/evidencias.md
-- Guion de demostración: docs/demostracion.md
-- Informe con capturas: docs/Informe_Pruebas_Incident_Hub.pdf
+## Informe de pruebas
+
+La carpeta `docs` contiene únicamente el informe final: [Informe de pruebas](docs/Informe_Pruebas_Incident_Hub.pdf).
 
 ## Límites
 
