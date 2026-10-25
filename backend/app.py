@@ -74,7 +74,7 @@ def api(method, path, data=None, query=None):
                     if query.get(field):
                         clauses.append(f'{field} = ?')
                         values.append(query[field][0])
-               search = query.get('q', [''])[0].strip()[:100]
+                search = query.get('q', [''])[0].strip()[:100]
                     if search:
                         clauses.append('(instr(lower(title), lower(?)) > 0 OR instr(lower(description), lower(?)) > 0)')
                         values.extend([search, search])
