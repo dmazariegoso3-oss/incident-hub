@@ -5,20 +5,27 @@ Mesa de servicio académica para registrar incidentes de TI, asignarlos, darles 
 ## Estado publicado
 
 - Repositorio único y público: https://github.com/dmazariegoso3-oss/incident-hub.
-- Se abrieron ocho PR con cambios concretos: #1, #2 y #33–#37 están fusionados; #38 está abierto para llevar la búsqueda visual a main.
-- crismazariegosovan-star aprobó #1, #2, #33, #34, #35 y #37. #36 se fusionó con una revisión COMMENTED, no APPROVED. #38 tiene revisión solicitada.
-- Los checks de #1, #2 y #33–#38 pasaron. El PR #38 añade a main el campo visual que #35 integró en codex/search-incidents.
-- Los 30 elementos del backlog están en Issues #3–#32 y vinculados al tablero “IT Incident Hub - Backlog”. El tablero es privado y muestra 28 elementos en Todo, 1 en In Progress y 1 en Done. Si el evaluador debe consultarlo, el propietario tendrá que hacer público el tablero.
-- CI #65 ejecutó 10 pruebas, la auditoría de requirements.txt no encontró vulnerabilidades conocidas y produjo el paquete 0.1.0. Ver docs/dependencias.md para alcance y límites.
-- Aún no hay release v1.0.0, ejecución confirmada de Azure, runner autohospedado utilizado, ni evidencia del fallo controlado y su corrección.
-- La rúbrica pide Azure Boards/Pipelines. Confirmar con el ingeniero por escrito si acepta GitHub como sustituto; no presentar la alternativa como aprobada sin evidencia.
+- Los PR #1, #2 y #33–#39 están fusionados en main; la búsqueda por título y descripción ya está disponible en la interfaz.
+- La segunda cuenta crismazariegosovan-star aprobó #1, #2, #33, #34, #35, #37, #38 y #39. El PR #36 recibió revisión COMMENTED, no APPROVED.
+- El issue #20 se cerró al fusionar #38. No hay PR abiertos al actualizar este documento.
+- El instructor confirmó, según lo informado por la estudiante, usar dos cuentas de GitHub ante la falta de Azure. La cuenta principal prepara cambios; la segunda cuenta prueba, revisa y aprueba PR. GitHub Issues/Projects y Actions son la plataforma de trabajo acordada.
+- Los 30 elementos del backlog están en Issues #3–#32 y en el tablero “IT Incident Hub - Backlog”. El tablero es privado; compártelo con el evaluador si necesita revisarlo.
+- El CI #65 ejecutó build, sintaxis JavaScript, 10 pruebas, auditoría de dependencias y paquete 0.1.0. Ver docs/dependencias.md.
+
+## Pendientes para cerrar la entrega
+
+- Capturar la evidencia de un fallo controlado en GitHub Actions, diagnóstico, corrección y ejecución verde posterior.
+- Ejecutar el workflow de validación con un runner autohospedado, si sigue siendo parte de los criterios aceptados por el instructor.
+- Trazar dos correcciones de deuda técnica a issues, commits, PR y pruebas.
+- Publicar tags/releases SemVer hasta v1.0.0, cuando se cumplan los criterios.
+- Hacer y conservar la demostración final.
 
 ## Funciones
 
 - Registrar incidentes con título, descripción, categoría, prioridad, usuario, fecha y estado.
 - Asignar técnicos y recorrer NUEVO, ASIGNADO, EN_PROCESO, RESUELTO y CERRADO.
 - Añadir comentarios y consultar la bitácora por incidente.
-- Filtrar por estado, prioridad, categoría y técnico. La API también permite buscar por título y descripción; el campo de interfaz está propuesto en el PR #38.
+- Filtrar por estado, prioridad, categoría y técnico, y buscar por título o descripción.
 - Consultar indicadores por estado, prioridad, categoría y técnico.
 - Guardar los datos persistentemente en SQLite.
 
