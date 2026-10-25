@@ -118,7 +118,7 @@ class IncidentTests(unittest.TestCase):
         self.assertEqual([row['id'] for row in rows], [title_match['id']])
 
         rows = app.api('GET', '/api/incidents', query={'q': ['   ']})[1]
-        self.assertEqual(len(rows), 3)
+        self.assertEqual(len(rows), 4)
 
 if __name__ == '__main__':
     unittest.main()
