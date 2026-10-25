@@ -8,7 +8,7 @@ Actualizado: 24 de octubre de 2026 (Guatemala). Esta tabla diferencia configurac
 |---|---|---|
 | Repositorio | Público; se decidió usar un único repo: [incident-hub](https://github.com/dmazariegoso3-oss/incident-hub) | — |
 | Aplicación y persistencia | API, frontend, SQLite, bitácora e indicadores están publicados en `main` | Completar la demostración final grabada o en vivo |
-| PR y revisión | Seis PR reales: #1 y #2 fusionados con aprobación de la segunda cuenta; #33 seguridad, #34 búsqueda API, #35 búsqueda UI y #36 evidencias están abiertos o en revisión. #33, #34 y #35 tienen 2/2 checks exitosos. | Faltan las revisiones aprobadas de #33–#36; no contar solicitudes como aprobaciones. #35 está apilado sobre #34 y debe integrarse después. |
+| PR y revisión | Seis PR reales: #1 y #2 fusionados con aprobación de la segunda cuenta; #33 seguridad, #34 búsqueda API, #35 búsqueda UI y #36 evidencias están abiertos o en revisión. #33, #34, #35 y #36 tienen 2/2 checks exitosos. | Faltan las revisiones aprobadas de #33–#36; no contar solicitudes como aprobaciones. #35 está apilado sobre #34 y debe integrarse después. |
 | GitHub Actions | CI ejecutó en el PR y los checks asociados terminaron exitosamente | Conservar/verificar enlace de ejecución y salida de auditoría como evidencia detallada |
 | Backlog | Los 30 elementos de la propuesta 2/4/8/16 están publicados como Issues #3–#32. | No hay un tablero GitHub publicado; falta organizar los issues en Projects o confirmar el sustituto aceptado para Azure Boards. |
 | Azure Boards / Pipelines | `azure-pipelines.yml` está en el repo; no se ha verificado ejecución de Azure | Ejecutar Azure o guardar aprobación escrita del ingeniero para sustituirlo por GitHub |
