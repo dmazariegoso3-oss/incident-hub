@@ -17,5 +17,6 @@ $('#update-form').addEventListener('submit',event=>{event.preventDefault();submi
 $('#comment-form').addEventListener('submit',event=>{event.preventDefault();submit(event.currentTarget,async data=>{await request('/api/incidents/'+selected+'/comments','POST',data);$('#comment-form').elements.message.value='';await openDetail(selected);});});
 $('#filters').addEventListener('submit',event=>{event.preventDefault();refresh().catch(notify);});
 $('#filters').addEventListener('reset',()=>setTimeout(()=>refresh().catch(notify),0));
-async function init(){meta=await request('/api/meta');for(const [field,values] of Object.entries({status:meta.states,priority:meta.priorities,category:meta.categories})){options($('#filters').elements[field],values);if(field!=='status')options($('#create-form').elements[field],values);}await refresh();}
+async function init(){meta=await request('/api/meta');const search=document.createElement('input');search.type='search';search.name='q';search.maxLength=100;search.placeholder='Buscar por título o descripción';search.setAttribute('aria-label','Buscar incidentes por título o descripción');$('#filters').prepend(search);for(const [field,values] of Object.entries({status:meta.states,priority:meta.priorities,category:meta.categories})){options($('#filters').elements[field],values);if(field!=='status')options($('#create-form').elements[field],values);}await refresh();}
 init().catch(notify);
+
