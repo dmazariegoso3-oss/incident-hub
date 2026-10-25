@@ -106,5 +106,19 @@ class IncidentTests(unittest.TestCase):
             thread.join()
 
 
+    def test_text_search_matches_title_description_and_combines_with_filters(self):
+        title_match = self.create(title='VPN caida', description='No conecta', category='Hardware')
+        description_match = self.create(title='Otro incidente', description='Falla de VPN en sede')
+        self.create(title='Correo', description='No recibe mensajes')
+
+        rows = app.api('GET', '/api/incidents', query={'q': ['vpn']})[1]
+        self.assertEqual({row['id'] for row in rows}, {title_match['id'], description_match['id']})
+
+        rows = app.api('GET', '/api/incidents', query={'q': ['vpn'], 'category': ['Hardware']})[1]
+        self.assertEqual([row['id'] for row in rows], [title_match['id']])
+
+        rows = app.api('GET', '/api/incidents', query={'q': ['   ']})[1]
+        self.assertEqual(len(rows), 3)
+
 if __name__ == '__main__':
     unittest.main()
