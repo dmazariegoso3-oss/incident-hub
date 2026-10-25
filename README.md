@@ -6,7 +6,7 @@ Mesa de servicio académica para registrar incidentes de TI, asignarlos, darles 
 
 - Repositorio único y público: https://github.com/dmazariegoso3-oss/incident-hub.
 - Hay seis PR reales: #1 y #2 están fusionados y aprobados por la segunda cuenta; #33–#36 tienen cambios concretos y siguen abiertos/en revisión.
-- PR #33 (encabezados de seguridad), #34 (búsqueda API) y #35 (búsqueda en interfaz) pasaron 2/2 checks de CI. El PR #36 actualiza evidencias; confirmar sus checks en GitHub.
+- Los PR #33 (encabezados de seguridad), #34 (búsqueda API), #35 (búsqueda en interfaz) y #36 (evidencias) pasaron 2/2 checks de CI.
 - crismazariegosovan-star tiene solicitudes de revisión en #33–#36. Una solicitud no equivale a aprobación. #35 depende de #34 y debe integrarse después.
 - Los 30 elementos del backlog están publicados como Issues #3–#32. Aún no hay un tablero Projects asociado.
 - La versión sigue en 0.1.0. No hay release v1.0.0, ejecución de Azure, runner autohospedado ni secuencia de fallo controlado acreditados.
