@@ -107,7 +107,7 @@ class IncidentTests(unittest.TestCase):
 
 
     def test_text_search_matches_title_description_and_combines_with_filters(self):
-        title_match = self.create(title='VPN caida', description='No conecta')
+        title_match = self.create(title='VPN caida', description='No conecta', category='Hardware')
         description_match = self.create(title='Otro incidente', description='Falla de VPN en sede')
         self.create(title='Correo', description='No recibe mensajes')
 
